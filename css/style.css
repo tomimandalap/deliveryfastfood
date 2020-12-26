@@ -62,7 +62,7 @@ a.cart:hover {
 }
 
 /* list menu dan main */
-.container-menu {
+.container-bars {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -88,36 +88,36 @@ aside.right {
 }
 
 /* list menu */
-.list-menu {
+.list-bars {
   padding: 0;
 }
 
-.list-menu li {
+.list-bars li {
   list-style: none;
 }
 
-.list-menu a {
+.list-bars a {
   font-size: 30px;
   display: block;
   padding: 15px 30px;
 }
 
-.menu-item1,
-.menu-item2 {
+.bars-item1,
+.bars-item2 {
   color: black;
 }
 
-.menu-item3 {
+.bars-item3 {
   color: limegreen;
 }
 
-/* hover list menu */
-.menu-item1:hover,
-.menu-item2:hover {
+/* hover list bars */
+.bars-item1:hover,
+.bars-item2:hover {
   color: #666666;
 }
 
-.menu-item3:hover {
+.bars-item3:hover {
   color: lightgreen;
 }
 
@@ -177,6 +177,7 @@ footer {
 a.github,
 a.youtube {
   font-size: 25px;
+  text-decoration: none;
 }
 
 .github {
@@ -223,7 +224,7 @@ a.youtube:hover {
     font-size: 18px;
   }
 
-  .list-menu a {
+  .list-bars a {
     font-size: 20px;
   }
 }
