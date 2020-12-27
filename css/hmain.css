@@ -1,0 +1,395 @@
+@font-face {
+  font-family: 'Airbnb Cereal App';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Airbnb Cereal App'), url('AirbnbCerealMedium.woff') format('woff');
+}
+
+* {
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: whitesmoke;
+}
+
+.navbar {
+  background: white;
+}
+
+button.btn.btn-light {
+  background: white;
+  font-size: 20px;
+  border: none;
+}
+
+button.btn.btn-light:hover {
+  background: whitesmoke;
+}
+
+a.home-text {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  color: #000;
+  font-family: 'Airbnb Cereal App';
+  font-size: 25px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+a.home-text:hover {
+  color: #666;
+}
+
+/* list menu, main chart */
+.container-bars {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+aside.left {
+  /* flex: 5%; */
+  min-width: 100px;
+  max-width: 100px;
+  background: #fff;
+  color: #fff;
+  transition: all 0.8s;
+  min-height: 90vh;
+}
+
+aside#side-left.active {
+  margin-left: -100px;
+  transition: all 0.5s;
+}
+
+section.main {
+  flex: 60%;
+  background-color: #eee;
+  /* min-height: 900px; */
+  padding: 30px 25px;
+  transition: 0.8s;
+}
+
+section#main.setting {
+  padding: 30px 60px;
+  background: rgba(102, 102, 102, 0.13);
+  transition: 0.4s;
+}
+
+/* card history */
+.card {
+  position: relative;
+  width: 370px;
+  height: 213px;
+  margin-bottom: 25px;
+}
+
+.today {
+  background: linear-gradient(278.29deg, #FBB2B4 30.05%, rgba(255, 143, 178, 0) 133.19%);
+  filter: drop-shadow(10px 15px 10px rgba(255, 143, 178, 0.25));
+  border-radius: 10px;
+}
+
+.orders {
+  background: linear-gradient(278.29deg, #29DFFF 30.05%, rgba(41, 223, 255, 0) 133.19%);
+  filter: drop-shadow(10px 15px 10px rgba(41, 223, 255, 0.25));
+  border-radius: 10px;
+}
+
+.years {
+  background: linear-gradient(278.29deg, #AB84C8 30.05%, rgba(241, 201, 236, 0) 133.19%);
+  filter: drop-shadow(10px 15px 10px rgba(241, 201, 236, 0.25));
+  border-radius: 10px;
+}
+
+.dot1 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: rgba(253, 211, 228, 0.3);
+  border-radius: 50%;
+}
+
+.dot2 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: rgba(207, 246, 253, 0.3);
+  border-radius: 50%;
+}
+
+.dot3 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: rgba(241, 201, 236, 0.3);
+  border-radius: 50%;
+}
+
+.dot1.dot-up,
+.dot2.dot-up,
+.dot3.dot-up {
+  top: 10px;
+  left: 260px;
+}
+
+.dot1.dot-down,
+.dot2.dot-down,
+.dot3.dot-down {
+  top: 50px;
+  left: 202px;
+}
+
+.dot1.dot-center,
+.dot2.dot-center,
+.dot3.dot-center {
+  top: 28px;
+  left: 232px;
+}
+
+.card-body {
+  padding: 50px 30px;
+  margin: 10px 0;
+  font-family: 'Airbnb Cereal App';
+}
+
+h5.card-title {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+h3.card-nominal {
+  font-weight: 600;
+  font-size: 25px;
+}
+
+p.card-text {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* list menu */
+.list-bars {
+  padding: 0;
+}
+
+.list-bars li {
+  list-style: none;
+}
+
+.list-bars a {
+  font-size: 30px;
+  display: block;
+  padding: 15px 40px;
+}
+
+.bars-item1,
+.bars-item2 {
+  color: black;
+  transform: rotate(0deg);
+  transition: all 0.5s;
+}
+
+/* status list on */
+.bars-item2#status-on {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  transform: rotate(0deg);
+}
+
+.bars-item3 {
+  color: limegreen;
+  transform: rotate(0deg);
+  transition: all 0.5s;
+}
+
+/* hover list bars */
+.bars-item1:hover,
+.bars-item2:hover {
+  color: #666666;
+  transform: rotate(180deg);
+  transition: all 0.8s;
+}
+
+.bars-item3:hover {
+  color: lightgreen;
+  transform: rotate(180deg);
+  transition: all 0.8s;
+}
+
+/* history-graph */
+.revenue-box {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  height: 422px;
+  background: #FFFFFF;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px 20px;
+  font-family: 'Airbnb Cereal App';
+}
+
+/* history order */
+.recent-box {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  height: 422px;
+  background: #FFFFFF;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px 20px;
+  font-family: 'Airbnb Cereal App';
+}
+
+/* footer */
+footer {
+  font-family: 'Airbnb Cereal App';
+  font-weight: 600;
+  background-color: #ccc;
+  color: black;
+  padding: 20px;
+  text-align: center;
+  /* margin-top: 50px; */
+}
+
+a.github,
+a.youtube {
+  font-size: 25px;
+  text-decoration: none;
+}
+
+.github {
+  color: black;
+}
+
+.youtube {
+  color: red;
+}
+
+a.github:hover {
+  color: #666666;
+}
+
+a.youtube:hover {
+  color: lightcoral;
+}
+
+/* mode tablet to dekstop */
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+  button.btn.btn-light {
+    font-size: 20px;
+  }
+
+  a.home-text {
+    top: 14px;
+    font-size: 22px;
+  }
+
+  button.btn.btn-light.cart {
+    left: 80%;
+  }
+
+  button.btn.btn-light.cart span {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  aside.left {
+    min-width: 80px;
+    max-width: 80px;
+    margin-left: -80px;
+  }
+
+  aside#side-left.active {
+    margin-left: 0;
+    transition: all 0.5s;
+  }
+
+  .list-bars a {
+    font-size: 25px;
+    padding: 15px 25px;
+  }
+
+  section.main {
+    flex: 50%;
+    /* background-color: rgb(61, 4, 4); */
+    padding: 30px 60px;
+    transition: 0.8s;
+  }
+
+  section#main.setting {
+    padding: 30px 25px;
+    background: rgba(44, 25, 25, 0.13);
+    transition: 0.4s;
+  }
+}
+
+/* mode untuk layar kecil */
+@media (max-width: 768px) {
+  button.btn.btn-light {
+    font-size: 16px;
+  }
+
+  a.home-text {
+    top: 14px;
+    font-size: 18px;
+    left: 45%;
+  }
+
+  aside.left {
+    min-width: 60px;
+    max-width: 60px;
+    margin-left: -60px;
+  }
+
+  aside#side-left.active {
+    margin-left: 0;
+    transition: all 0.5s;
+  }
+
+  .list-bars a {
+    font-size: 18px;
+    padding: 15px 25px;
+  }
+
+  section.main {
+    flex: 50%;
+    /* background-color: rgb(61, 4, 4); */
+    padding: 30px 55px;
+    transition: 0.8s;
+  }
+
+  section#main.setting {
+    padding: 30px 25px;
+    background: rgba(102, 102, 102, 0.13);
+    transition: 0.4s;
+  }
+
+  .bars-item1:hover,
+  .bars-item2:hover,
+  .bars-item3:hover {
+    transform: rotate(0deg);
+  }
+
+  /* footer */
+  footer {
+    font-size: 14px;
+    padding: 15px;
+    text-align: center;
+    /* margin-top: 50px; */
+  }
+
+  a.github,
+  a.youtube {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,58 @@
+{
+    "menu": [
+        {
+            "category": "Drink",
+            "name": "Espresso",
+            "price": "10.000",
+            "image": "img1.png"
+        },
+        {
+            "category": "Drink",
+            "name": "Coffe Latte",
+            "price": "15.000",
+            "image": "img2.png"
+        },
+        {
+            "category": "Drink",
+            "name": "Cappucino",
+            "price": "5.000",
+            "image": "img3.png"
+        },
+        {
+            "category": "Drink",
+            "name": "Red Velvet Latte",
+            "price": "33.000",
+            "image": "img4.png"
+        },
+        {
+            "category": "Food",
+            "name": "Choco Rhum",
+            "price": "28.000",
+            "image": "img5.png"
+        },
+        {
+            "category": "Food",
+            "name": "Black Forest",
+            "price": "30.000",
+            "image": "img6.png"
+        },
+        {
+            "category": "Food",
+            "name": "Chicken Katsu Dabu-dabu",
+            "price": "60.000",
+            "image": "img7.png"
+        },
+        {
+            "category": "Food",
+            "name": "Salmon Truffle Teriyaki",
+            "price": "60.000",
+            "image": "img8.png"
+        },
+        {
+            "category": "Food",
+            "name": "Wiener Schnitzel",
+            "price": "69.000",
+            "image": "img9.png"
+        }
+    ]
+}
