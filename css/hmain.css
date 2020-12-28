@@ -227,26 +227,67 @@ p.card-text {
 .revenue-box {
   margin-top: 30px;
   margin-bottom: 30px;
-  height: 422px;
+  height: 600px;
   background: #FFFFFF;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
-  text-align: center;
-  padding: 20px 20px;
+  text-align: left;
+  padding: 30px 50px;
   font-family: 'Airbnb Cereal App';
+  font-size: 25px;
+}
+
+.dropdown a#dropdownMenuLink {
+  background: #CECECE;
+  border: none;
+  color: #000;
+  border-radius: 20px;
+  padding-right: 20px;
+  font-size: 15px;
+  margin-left: 85%;
+  margin-top: -110px;
+}
+
+/* container chart revenue */
+.chart-container {
+  margin-top: -5px;
+  margin-left: 50px;
+  width: 65vw;
 }
 
 /* history order */
 .recent-box {
   margin-top: 30px;
   margin-bottom: 30px;
-  height: 422px;
+  height: 600px;
   background: #FFFFFF;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
-  text-align: center;
-  padding: 20px 20px;
+  text-align: left;
+  padding: 30px 50px;
   font-family: 'Airbnb Cereal App';
+  font-size: 25px;
+}
+
+/* table */
+table.tables {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tables th,
+.tables td {
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  font-size: 15px;
+}
+
+.tables th {
+  text-transform: uppercase;
+}
+
+.tables td {
+  color: #CECECE;
 }
 
 /* footer */
@@ -301,6 +342,30 @@ a.youtube:hover {
   button.btn.btn-light.cart span {
     font-size: 18px;
     font-weight: 600;
+  }
+
+  /* history-graph */
+  .revenue-box {
+    height: 400px;
+    padding: 20px 20px;
+    font-size: 20px;
+  }
+
+  .dropdown a#dropdownMenuLink {
+    margin-left: 80%;
+    margin-top: -90px;
+  }
+
+  /* container chart revenue */
+  .chart-container {
+    margin-top: -20px;
+    margin-left: 50px;
+  }
+
+  .recent-box {
+    height: 400px;
+    padding: 20px 20px;
+    font-size: 20px;
   }
 
   aside.left {
@@ -378,6 +443,45 @@ a.youtube:hover {
   .bars-item2:hover,
   .bars-item3:hover {
     transform: rotate(0deg);
+  }
+
+  /* history-graph */
+  .revenue-box {
+    height: 225px;
+    /* width: 350px; */
+    padding: 10px 15px;
+    font-size: 16px;
+    transition: 0.8s;
+  }
+
+  .dropdown a#dropdownMenuLink {
+    border-radius: 5px;
+    font-size: 12px;
+    margin-left: 75%;
+    margin-top: -80px;
+  }
+
+  /* container chart revenue */
+  .chart-container {
+    margin-top: -15px;
+    margin-left: 15px;
+    width: 58vw;
+  }
+
+  .recent-box {
+    height: 300px;
+    padding: 10px 15px;
+    font-size: 16px;
+  }
+
+  .tables th,
+  .tables td {
+    padding: 5px;
+    font-size: 10px;
+  }
+
+  .tables td {
+    color: #000;
   }
 
   /* footer */

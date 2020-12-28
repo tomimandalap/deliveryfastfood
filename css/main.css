@@ -54,11 +54,29 @@ button.btn.btn-light.cart {
   position: absolute;
   top: 9px;
   left: 80%;
+  height: 42px;
+  font-weight: 700;
 }
 
-button.btn.btn-light.cart span {
-  font-family: 'Airbnb Cereal App';
-  font-weight: 600;
+button.btn.btn-light.cart p {
+  font-size: 20px;
+}
+
+/* shoping bag item */
+span.index-item {
+  position: absolute;
+  top: 11px;
+  left: 85%;
+
+  display: block;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  background: #57CAD5;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  padding: 6px 14px;
 }
 
 /* list menu, main chart */
@@ -180,6 +198,10 @@ img.image {
   /* right: -5%; */
 }
 
+img#img-cursor {
+  cursor: pointer;
+}
+
 #sidebar-right h3.menu-cart,
 #sidebar-right p.mune-add {
   font-family: 'Airbnb Cereal App';
@@ -266,12 +288,17 @@ a.youtube:hover {
   }
 
   button.btn.btn-light.cart {
-    left: 80%;
+    left: 79%;
   }
 
-  button.btn.btn-light.cart span {
-    font-size: 18px;
-    font-weight: 600;
+  button.btn.btn-light.cart p {
+    font-size: 20px;
+  }
+
+  /* shoping bag item */
+  span.index-item {
+    top: 11px;
+    left: 87%;
   }
 
   aside.left {
@@ -304,16 +331,17 @@ a.youtube:hover {
   }
 
   aside.right {
-    background: #00000090;
     position: fixed;
     top: auto;
     right: auto;
     width: 500px;
     min-height: 500px;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
   }
 
   aside#side-right.active {
-    /* margin-right: -150px; */
     display: none;
   }
 
@@ -323,14 +351,14 @@ a.youtube:hover {
   }
 
   h3.menu-cart {
-    color: #fff;
-    text-shadow: 0 0 2px black;
+    color: #000;
     font-size: 25px;
   }
 
   p.menu-add {
-    color: #fff;
+    color: #000;
     font-size: 16px;
+    font-weight: 600;
   }
 }
 
@@ -346,11 +374,22 @@ a.youtube:hover {
   }
 
   button.btn.btn-light.cart {
-    left: 78%;
+    left: 74%;
+    top: 4px;
   }
 
-  button.btn.btn-light.cart span {
-    font-weight: 600;
+  button.btn.btn-light.cart p {
+    font-size: 20px;
+  }
+
+  /* shoping bag item */
+  span.index-item {
+    top: 9px;
+    left: 88%;
+    font-size: 14px;
+    width: 34px;
+    height: 34px;
+    padding: 6px 13px;
   }
 
   aside.left {
@@ -383,18 +422,16 @@ a.youtube:hover {
   }
 
   aside.right {
-    background: #00000080;
     position: fixed;
     top: auto;
     right: auto;
-    width: 500px;
     min-height: 500px;
-    /* margin-right: 0px; */
-    /* height: 100%; */
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
   }
 
   aside#side-right.active {
-    /* margin-right: -150px; */
     display: none;
   }
 
@@ -410,15 +447,14 @@ a.youtube:hover {
   }
 
   h3.menu-cart {
-    color: #fff;
-    text-shadow: 0 0 2px black;
+    color: #000;
     font-size: 16px;
   }
 
   p.menu-add {
-    color: #fff;
-    text-shadow: 0 0 2px rgb(0, 0, 0);
+    color: #000;
     font-size: 12px;
+    font-weight: 600;
   }
 
   .card {
