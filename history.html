@@ -12,8 +12,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" charset="utf-8"></script>
 
   <!-- chartjs -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  
   <!-- css ekternal -->
   <link rel="stylesheet" href="css/hmain.css">
 
@@ -43,7 +43,11 @@
       <ul class="list-bars">
         <li><a class="bars-item1" href="index.html"><i class="fas fa-utensils"></i></a></li>
         <li><a class="bars-item2" id="status-on" href="history.html"><i class="far fa-clipboard"></i></a></li>
-        <li><a class="bars-item3" href="#"><i class="fas fa-plus"></i></a></li>
+        <li>
+          <button class="btn btn-light bars-item3" id="btn-plus" type="button">
+            <i class="fas fa-plus"></i>
+          </button>
+        </li>
       </ul>
     </aside>
     
@@ -102,9 +106,9 @@
               </a>
             
               <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" href="#">Day</a>
-                <a class="dropdown-item" href="#">Month</a>
-                <a class="dropdown-item" href="#">Year</a>
+                <a class="dropdown-item" href="">Day</a>
+                <a class="dropdown-item" href="">Month</a>
+                <a class="dropdown-item" href="">Year</a>
               </div>
             </div>
 
@@ -121,14 +125,14 @@
             <p><b>Recent Order</b></p>
 
             <div class="dropdown">
-              <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="btn btn-secondary dropdown-toggle" href="" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Today
               </a>
             
               <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" href="#">Today</a>
-                <a class="dropdown-item" href="#">Months</a>
-                <a class="dropdown-item" href="#">Years</a>
+                <a class="dropdown-item" href="">Today</a>
+                <a class="dropdown-item" href="">Months</a>
+                <a class="dropdown-item" href="">Years</a>
               </div>
             </div>
 
@@ -171,6 +175,45 @@
         </div>
       </div>
 
+    </section>
+
+    <!-- add items -->
+    <section class="modal-container" id="modal_container">
+      <div class="modal">
+        <h1>Add Item</h1>
+
+        <!-- form -->
+        <form action="" method="">
+          <div class="form-group">
+            <label for="name-form">Name</label>
+            <div class="input"><input class="form-control" type="text" placeholder="Default name" id="name-form">
+          </div>
+          <div class="form-group">
+            <label for="image-form">Image</label>
+            <div class="input"><input class="form-control" type="text" placeholder="Default image" id="image-form"></div>
+          </div>
+          <div class="form-group">
+            <label for="price-form">Price</label>
+            <div class="input"><input class="form-control" type="text" placeholder="Default price" id="price-form"></div>
+          </div>
+          <div class="form-group">
+            <label for="category-form">Category</label>
+            <div class="input">
+              <select class="custom-select w-80" id="category-form">
+                <option selected>Category</option>
+                <option value="1">Food</option>
+                <option value="2">Drink</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- button -->
+          <button type="submit" class="btn btn-danger mb-2" id="btn-cancel">Cancel</button>
+          <button type="submit" class="btn btn-info mb-2 ml-2" id="btn-add">Add</button>
+        </form>
+        <!-- form end -->
+
+      </div>
     </section>
 
   </div>

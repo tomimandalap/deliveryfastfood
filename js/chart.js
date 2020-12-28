@@ -1,3 +1,4 @@
+// chart revenue 
 var ctx = document.getElementById('revenueChart').getContext('2d');
 
 var myChart = new Chart(ctx, {
@@ -47,12 +48,16 @@ options: {
             ticks: {
                 max: 50,
                 min: 0,
+                // fontFamily: 'Airbnb Cereal App',
+                // fontSize: 14,
                 stepSize: 10
-            },
+            }
             // scaleLabel: {
             //     display: true,
-            //     labelString: "Rupiah",
-            //     fontColor: "teal"
+            //     labelString: "Rupiah (@ x 1k)",
+            //     fontColor: "#000",
+            //     fontFamily: 'Airbnb Cereal App',
+            //     fontSize: 18,
             // }
             // gridLines: {
             //     color: "black",
@@ -66,7 +71,7 @@ options: {
                 max: 15,
                 min: 0,
                 stepSize: 10,
-            },
+            }            
             // scaleLabel: {
             //     display: true,
             //     labelString: "Time in Seconds",

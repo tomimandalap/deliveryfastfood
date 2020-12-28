@@ -30,8 +30,16 @@ $(document).ready(function() {
   })
 })
 
-$(document).ready(function() {
-  $('#add-items').on('click', function() {
-    
-  })
+// klik add items
+const open = document.getElementById('btn-plus')
+const modal_container = document.getElementById('modal_container') 
+const close = document.getElementById('btn-cancel')
+
+open.addEventListener('click', function() {
+  modal_container.classList.add('show')
 })
+
+close.addEventListener('click', function() {
+  modal_container.classList.remove('show')
+})
+

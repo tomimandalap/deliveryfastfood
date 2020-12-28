@@ -53,6 +53,24 @@
             "name": "Wiener Schnitzel",
             "price": "69.000",
             "image": "img9.png"
+        },
+        {
+            "category": "Food",
+            "name": "Beef Lasagna",
+            "price": "68.000",
+            "image": "beef-lasagna.jpg"
+        },
+        {
+            "category": "Food",
+            "name": "Black Pepper Chicken",
+            "price": "75.000",
+            "image": "black-pepper-chicken.jpg"
+        },
+        {
+            "category": "Food",
+            "name": "Meatballs Beef Mushroom",
+            "price": "68.000",
+            "image": "meatballs-beef-mushroom.jpg"
         }
     ]
 }

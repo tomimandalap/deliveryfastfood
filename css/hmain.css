@@ -164,6 +164,7 @@ h5.card-title {
 }
 
 h3.card-nominal {
+  position: relative;
   font-weight: 600;
   font-size: 25px;
 }
@@ -203,12 +204,6 @@ p.card-text {
   transform: rotate(0deg);
 }
 
-.bars-item3 {
-  color: limegreen;
-  transform: rotate(0deg);
-  transition: all 0.5s;
-}
-
 /* hover list bars */
 .bars-item1:hover,
 .bars-item2:hover {
@@ -217,7 +212,19 @@ p.card-text {
   transition: all 0.8s;
 }
 
+.bars-item3 {
+  color: limegreen;
+  font-size: 30px !important;
+  background: transparent !important;
+  display: block;
+  margin-top: 10px;
+  margin-left: 26px;
+  transform: rotate(0deg);
+  transition: all 0.5s;
+}
+
 .bars-item3:hover {
+  background: transparent !important;
   color: lightgreen;
   transform: rotate(180deg);
   transition: all 0.8s;
@@ -288,6 +295,144 @@ table.tables {
 
 .tables td {
   color: #CECECE;
+}
+
+/* add items */
+section.modal-container {
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  opacity: 0;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+section.modal-container.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  top: 25%;
+  left: 25%;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 30px 50px;
+  width: 600px;
+  height: 300px;
+  max-width: 100%;
+  text-align: center;
+}
+
+.modal h1 {
+  margin: 0;
+}
+
+.modal p {
+  font-size: 14px;
+  text-align: justify;
+  opacity: 0.7;
+}
+
+/* add items */
+section.modal-container {
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  opacity: 0;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  transition: all 0.8s;
+  z-index: 1;
+}
+
+section.modal-container.show {
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.8s;
+}
+
+.modal {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  top: 18%;
+  left: 25%;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  padding: 20px 20px;
+  width: 600px;
+  height: 400px;
+  max-width: 100%;
+  text-align: left;
+}
+
+.modal h1 {
+  font-family: 'Airbnb Cereal App';
+  font-size: 25px;
+  font-weight: 600;
+}
+
+/* form group */
+.form-group {
+  font-family: 'Airbnb Cereal App';
+  clear: both;
+}
+
+.form-group label {
+  display: block;
+  padding: 12px 0;
+  float: left;
+  width: 20%;
+  font-weight: 600;
+}
+
+.form-group .input {
+  display: block;
+  width: 78%;
+  float: left;
+  margin-top: 7px;
+  box-shadow: 0px 5px 8px rgb(0, 0, 0, 0.2);
+}
+
+button#btn-cancel {
+  padding: 5px 30px;
+  font-weight: 600;
+  background: #F24F8A;
+  border: none;
+  margin-top: 70px;
+  margin-left: 190px;
+}
+
+button#btn-cancel:hover {
+  background: #ec81a8;
+}
+
+button#btn-add {
+  padding: 5px 41px;
+  font-weight: 600;
+  background: #57CAD5;
+  border: none;
+  margin-top: 70px;
+}
+
+button#btn-add:hover {
+  background: #85cbd1;
 }
 
 /* footer */
@@ -396,6 +541,28 @@ a.youtube:hover {
     background: rgba(44, 25, 25, 0.13);
     transition: 0.4s;
   }
+
+  .bars-item3 {
+    font-size: 25px !important;
+    margin-left: 12px;
+  }
+
+  /* add items */
+  .modal {
+    margin-top: -10px;
+    width: 500px;
+    height: 400px;
+  }
+
+  .modal h1 {
+    font-size: 20px;
+  }
+
+  /* form group */
+  button#btn-cancel {
+    margin-top: 70px;
+    margin-left: 115px;
+  }
 }
 
 /* mode untuk layar kecil */
@@ -437,6 +604,11 @@ a.youtube:hover {
     padding: 30px 25px;
     background: rgba(102, 102, 102, 0.13);
     transition: 0.4s;
+  }
+
+  .bars-item3 {
+    font-size: 18px !important;
+    margin-left: 12px;
   }
 
   .bars-item1:hover,
@@ -482,6 +654,41 @@ a.youtube:hover {
 
   .tables td {
     color: #000;
+  }
+
+  /* add items */
+  .modal {
+    top: 18%;
+    left: 9%;
+    width: 400px;
+    height: 400px;
+  }
+
+  .modal h1 {
+    font-size: 18px;
+  }
+
+  /* form group */
+  .form-group label {
+    font-size: 16px;
+  }
+
+  .form-group .input {
+    width: 60%;
+    margin-top: 7px;
+    margin-left: 50px;
+  }
+
+  button#btn-cancel {
+    font-size: 14px;
+    padding: 8px 20px;
+    margin-top: 70px;
+    margin-left: 70px;
+  }
+
+  button#btn-add {
+    font-size: 14px;
+    padding: 8px 31px;
   }
 
   /* footer */
