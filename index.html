@@ -48,7 +48,9 @@
   </div>
   <!-- navbar end -->
   
+  <!-- start container-bars -->
   <div class="container-bars">
+    <!-- aside left -->
     <aside class="left" id="side-left">
       <ul class="list-bars">
         <li><a class="bars-item1" id="status-on" href="index.html"><i class="fas fa-utensils"></i></a></li>
@@ -60,18 +62,121 @@
         </li>
       </ul>
     </aside>
+    <!-- aside left end-->
     
+    <!-- section main -->
     <section class="main" id="main">
       <div class="row" id="menu-list">
-        <!-- isi menu-list  -->
+        <!-- menu-list food and drink  -->
+        <div class="col-6 col-md-4">
+          <div class="card mb-3">
+            <img src="img/img1.png" class="card-img-top" alt="drink" id="img-cursor">
+            <a href="index.html" class="add-cart cart1" id="add-cart"><i class="far fa-check-circle"></i></a>
+            <div class="card-body">
+              <h5 class="card-title">Esspresso</h5>
+              <span class="prices">Rp. 10.000</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4">
+          <div class="card mb-3">
+            <img src="img/img2.png" class="card-img-top" alt="drink" id="img-cursor">
+            <a href="index.html" class="add-cart cart2" id="add-cart"><i class="far fa-check-circle"></i></a>
+            <div class="card-body">
+              <h5 class="card-title">Coffe Latte</h5>
+              <span class="prices">Rp. 15.000</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4">
+          <div class="card mb-3">
+            <img src="img/img3.png" class="card-img-top" alt="drink" id="img-cursor">
+            <a href="index.html" class="add-cart cart3" id="add-cart"><i class="far fa-check-circle"></i></a>
+            <div class="card-body">
+              <h5 class="card-title">Cappucino</h5>
+              <span class="prices">Rp. 5.000</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4">
+          <div class="card mb-3">
+            <img src="img/img4.png" class="card-img-top" alt="drink" id="img-cursor">
+            <a href="index.html" class="add-cart cart4" id="add-cart"><i class="far fa-check-circle"></i></a>
+            <div class="card-body">
+              <h5 class="card-title">Red Velvet Latte</h5>
+              <span class="prices">Rp. 33.000</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4">
+          <div class="card mb-3">
+            <img src="img/img5.png" class="card-img-top" alt="food" id="img-cursor">
+            <a href="index.html" class="add-cart cart5" id="add-cart"><i class="far fa-check-circle"></i></a>
+            <div class="card-body">
+              <h5 class="card-title">Choco Rhum</h5>
+              <span class="prices">Rp. 28.000</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4">
+          <div class="card mb-3">
+            <img src="img/img6.png" class="card-img-top" alt="food" id="img-cursor">
+            <a href="index.html" class="add-cart cart6" id="add-cart"><i class="far fa-check-circle"></i></a>
+            <div class="card-body">
+              <h5 class="card-title">Black Forest</h5>
+              <span class="prices">Rp. 30.000</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4">
+          <div class="card mb-3">
+            <img src="img/img7.png" class="card-img-top" alt="food" id="img-cursor">
+            <a href="index.html" class="add-cart cart7" id="add-cart"><i class="far fa-check-circle"></i></a>
+            <div class="card-body">
+              <h5 class="card-title">Chicken Katsu <br> Dabu-dabu</h5>
+              <span class="prices">Rp. 60.000</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4">
+          <div class="card mb-3">
+            <img src="img/img8.png" class="card-img-top" alt="food" id="img-cursor">
+            <a href="index.html" class="add-cart cart8" id="add-cart"><i class="far fa-check-circle"></i></a>
+            <div class="card-body">
+              <h5 class="card-title">Salmon Truffle Teriyaki</h5>
+              <span class="prices">Rp. 60.000</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4">
+          <div class="card mb-3">
+            <img src="img/img9.png" class="card-img-top" alt="food" id="img-cursor">
+            <a href="index.html" class="add-cart cart9" id="add-cart"><i class="far fa-check-circle" ></i></a>
+            <div class="card-body">
+              <h5 class="card-title">Wiener Schnitzel</h5>
+              <span class="prices">Rp. 69.000</span>
+            </div>
+          </div>
+        </div>
+        <!-- menu list end -->
       </div>
     </section>
+    <!-- section main end -->
 
     <!-- add item plus -->
     <section class="modal-container" id="modal_container">
       <div class="modal">
         <h1>Add Item</h1>
 
+        <h3 class="buy-total">Total:</h3>
         <!-- form -->
         <form action="" method="">
           <div class="form-group">
@@ -97,23 +202,31 @@
             </div>
           </div>
 
-          <!-- button -->
+          <!-- button form -->
           <button type="submit" class="btn btn-danger mb-2" id="btn-cancel">Cancel</button>
           <button type="submit" class="btn btn-info mb-2 ml-2" id="btn-add">Add</button>
+          <!-- button form  end-->
         </form>
         <!-- form end -->
 
       </div>
     </section>
+    <!-- add item plus end-->
 
+    <!-- aside right -->
     <aside class="right" id="side-right">
-      <img class="image" src="img/food-and-restaurant.png" alt="image-empity">
-      <h3 class="menu-cart" id="menu_cart">Your cart is empty</h3>
-      <p class="menu-add">Please add some items from the menu</p>
+      <div class="containter-cart">
+        <!-- CONTEN CART -->
+      </div>
+
+      <section class="buy-items" id="buy-items">
+        <!-- total Cart -->
+      </section>
     </aside>
-    
+    <!-- aside right end -->
 
   </div>
+  <!-- container-bars end -->
 
   <!-- footer -->
   <!-- <footer>
