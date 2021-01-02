@@ -725,12 +725,12 @@ button#btn-sendEmail:hover {
   section.main {
     flex: 60%;
     /* background-color: rgb(61, 4, 4); */
-    padding: 30px 55px;
+    padding: 30px 50px !important;
     transition: 0.8s;
   }
 
   section#main.setting {
-    padding: 30px 20px;
+    padding: 30px 20px !important;
     background: rgba(102, 102, 102, 0.13);
     transition: 0.4s;
   }
@@ -788,7 +788,7 @@ button#btn-sendEmail:hover {
   }
 
   .card {
-    width: 11rem;
+    width: 11rem !important;
   }
 
   /* .card-body {
@@ -832,7 +832,7 @@ button#btn-sendEmail:hover {
   /* add items */
   .modal {
     top: 18%;
-    left: 9%;
+    left: 15% !important;
     width: 400px;
     height: 400px;
   }

@@ -611,25 +611,21 @@ a.youtube:hover {
     margin-left: 12px;
   }
 
-  .bars-item1:hover,
-  .bars-item2:hover,
-  .bars-item3:hover {
-    transform: rotate(0deg);
+  /* card history */
+  .card {
+    margin-left: 60px !important;
   }
 
   /* history-graph */
   .revenue-box {
-    height: 225px;
-    /* width: 350px; */
-    padding: 10px 15px;
-    font-size: 16px;
-    transition: 0.8s;
+    height: 250px !important;
+    padding: 10px 15px !important;
   }
 
   .dropdown a#dropdownMenuLink {
     border-radius: 5px;
     font-size: 12px;
-    margin-left: 75%;
+    margin-left: 75% !important;
     margin-top: -80px;
   }
 
@@ -646,20 +642,10 @@ a.youtube:hover {
     font-size: 16px;
   }
 
-  .tables th,
-  .tables td {
-    padding: 5px;
-    font-size: 10px;
-  }
-
-  .tables td {
-    color: #000;
-  }
-
   /* add items */
   .modal {
     top: 18%;
-    left: 9%;
+    left: 15% !important;
     width: 400px;
     height: 400px;
   }
