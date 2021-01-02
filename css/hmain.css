@@ -704,3 +704,224 @@ a.youtube:hover {
     font-size: 20px;
   }
 }
+
+/* mode samrtphone */
+@media (max-width: 576px) {
+  button.btn.btn-light {
+    font-size: 16px;
+  }
+
+  a.home-text {
+    top: 14px;
+    font-size: 18px;
+    left: 45%;
+  }
+
+  aside.left {
+    min-width: 50px;
+    max-width: 50px;
+    margin-left: -50px;
+  }
+
+  aside#side-left.active {
+    margin-left: 0;
+    transition: all 0.5s;
+  }
+
+  .list-bars a {
+    font-size: 16px;
+    padding: 15px 20px;
+  }
+
+  section.main {
+    flex: 80%;
+    padding: 30px 22px;
+    transition: 0.8s;
+  }
+
+  section#main.setting {
+    padding: 30px 1px !important;
+    background: rgba(102, 102, 102, 0.13);
+    transition: 0.4s;
+  }
+
+  .bars-item3 {
+    font-size: 16px !important;
+    margin-left: 8px;
+  }
+
+  .bars-item1:hover,
+  .bars-item2:hover,
+  .bars-item3:hover {
+    transform: rotate(0deg);
+  }
+
+  /* card history */
+  .card {
+    position: relative;
+    width: 330px;
+    height: 180px;
+    margin-left: 15px;
+    margin-bottom: 25px;
+  }
+
+  .today {
+    background: linear-gradient(278.29deg, #FBB2B4 30.05%, rgba(255, 143, 178, 0) 133.19%);
+    filter: drop-shadow(10px 15px 10px rgba(255, 143, 178, 0.25));
+    border-radius: 10px;
+  }
+
+  .orders {
+    background: linear-gradient(278.29deg, #29DFFF 30.05%, rgba(41, 223, 255, 0) 133.19%);
+    filter: drop-shadow(10px 15px 10px rgba(41, 223, 255, 0.25));
+    border-radius: 10px;
+  }
+
+  .years {
+    background: linear-gradient(278.29deg, #AB84C8 30.05%, rgba(241, 201, 236, 0) 133.19%);
+    filter: drop-shadow(10px 15px 10px rgba(241, 201, 236, 0.25));
+    border-radius: 10px;
+  }
+
+  .dot1 {
+    width: 80px;
+    height: 80px;
+  }
+
+  .dot2 {
+    width: 80px;
+    height: 80px;
+  }
+
+  .dot3 {
+    width: 80px;
+    height: 80px;
+  }
+
+  .dot1.dot-up,
+  .dot2.dot-up,
+  .dot3.dot-up {
+    left: 240px;
+  }
+
+  .dot1.dot-down,
+  .dot2.dot-down,
+  .dot3.dot-down {
+    left: 182px;
+  }
+
+  .dot1.dot-center,
+  .dot2.dot-center,
+  .dot3.dot-center {
+    left: 216px;
+  }
+
+  .card-body {
+    padding: 45px 30px;
+  }
+
+  h5.card-title {
+    font-size: 14px;
+  }
+
+  h3.card-nominal {
+    font-size: 18px;
+  }
+
+  p.card-text {
+    font-size: 12px;
+  }
+
+  /* history-graph */
+  .revenue-box {
+    height: 225px;
+    /* width: 350px; */
+    padding: 10px 15px;
+    font-size: 16px;
+    transition: 0.8s;
+  }
+
+  .dropdown a#dropdownMenuLink {
+    border-radius: 5px;
+    font-size: 12px;
+    margin-left: 75%;
+    margin-top: -80px;
+  }
+
+  /* container chart revenue */
+  .chart-container {
+    margin-top: -15px;
+    margin-left: 15px;
+    width: 75vw;
+  }
+
+  .recent-box {
+    height: 300px;
+    padding: 10px 15px;
+    font-size: 16px;
+  }
+
+  .tables th,
+  .tables td {
+    padding: 5px;
+    font-size: 10px;
+  }
+
+  .tables td {
+    color: #000;
+  }
+
+  /* add items */
+  .modal {
+    top: 18%;
+    left: 8%;
+    width: 350px;
+    height: 350px;
+  }
+
+  .modal h1 {
+    font-size: 16px;
+  }
+
+  /* form group */
+  .form-group label {
+    font-size: 14px;
+  }
+
+  .form-group .input {
+    width: 72%;
+    margin-top: 5px;
+    margin-left: 20px;
+  }
+
+  .input input.form-control,
+  select.custom-select {
+    font-size: 12px;
+  }
+
+  button#btn-cancel {
+    font-size: 14px;
+    padding: 8px 20px;
+    margin-top: 50px;
+    margin-left: 50px;
+  }
+
+  button#btn-add {
+    margin-top: 50px;
+    font-size: 14px;
+    padding: 8px 31px;
+  }
+
+  /* footer */
+  footer {
+    font-size: 14px;
+    padding: 15px;
+    text-align: center;
+    /* margin-top: 50px; */
+  }
+
+  a.github,
+  a.youtube {
+    font-size: 20px;
+  }
+}
