@@ -564,39 +564,6 @@ button#btn-sendEmail:hover {
   background: #85cbd1;
 }
 
-/* footer */
-footer {
-  font-family: 'Airbnb Cereal App';
-  font-weight: 600;
-  background-color: #ccc;
-  color: black;
-  padding: 20px;
-  text-align: center;
-  /* margin-top: 50px; */
-}
-
-a.github,
-a.youtube {
-  font-size: 25px;
-  text-decoration: none;
-}
-
-.github {
-  color: black;
-}
-
-.youtube {
-  color: red;
-}
-
-a.github:hover {
-  color: #666666;
-}
-
-a.youtube:hover {
-  color: lightcoral;
-}
-
 /* mode tablet to dekstop */
 @media (min-width: 768px) and (max-width: 991.98px) {
 
@@ -653,7 +620,12 @@ a.youtube:hover {
   }
 
   aside.right {
+    display: none;
+  }
+
+  aside#side-right.active {
     /* position: fixed; */
+    display: block;
     position: absolute;
     top: auto;
     right: auto;
@@ -662,10 +634,6 @@ a.youtube:hover {
     background: #fff;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
-  }
-
-  aside#side-right.active {
-    display: none;
   }
 
   .bars-item3 {
@@ -707,7 +675,8 @@ a.youtube:hover {
   }
 }
 
-/* mode small screen */
+/* Small devices landscape phones*/
+
 @media (max-width: 768px) {
   button.btn.btn-light {
     font-size: 16px;
@@ -767,18 +736,19 @@ a.youtube:hover {
   }
 
   aside.right {
-    /* position: fixed; */
-    position: absolute;
-    top: auto;
-    right: auto;
-    min-height: 500px;
-    background: #fff;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
+    display: none !important;
   }
 
   aside#side-right.active {
-    display: none;
+    display: block !important;
+    /* position: fixed !important; */
+    position: absolute;
+    top: auto;
+    right: auto;
+    min-height: 400px;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
   }
 
   .bars-item3 {
@@ -946,19 +916,6 @@ a.youtube:hover {
     height: 40px;
     font-size: 14px;
   }
-
-  /* footer */
-  footer {
-    font-size: 14px;
-    padding: 15px;
-    text-align: center;
-    /* margin-top: 50px; */
-  }
-
-  a.github,
-  a.youtube {
-    font-size: 20px;
-  }
 }
 
 /* mode samrtphone */
@@ -1026,6 +983,11 @@ a.youtube:hover {
   }
 
   aside.right {
+    display: none !important;
+  }
+
+  aside#side-right.active {
+    display: block !important;
     /* position: fixed; */
     position: absolute;
     top: auto;
@@ -1036,10 +998,6 @@ a.youtube:hover {
     background: #fff;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
-  }
-
-  aside#side-right.active {
-    display: none;
   }
 
   .bars-item3 {
@@ -1195,7 +1153,7 @@ a.youtube:hover {
     min-height: 350px;
   }
 
-  s .modal h1 {
+  .modal h1 {
     font-size: 16px;
   }
 

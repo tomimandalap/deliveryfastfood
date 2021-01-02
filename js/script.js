@@ -146,6 +146,12 @@ function displayCart() {
     
       // CONTEN CART
       Object.values(cartItems).map(item => {
+
+      // const data = item.inCart * item.price *1000
+      // const str = data.toString().split('')
+      // str.splice(2,0,'.')
+      // console.log(str.join(''))
+
       productContainer.innerHTML += `
       <div class="row mt-2">
         <div class="col-4">
@@ -160,13 +166,17 @@ function displayCart() {
         </div>
 
         <div class="col-4">
-          <span class="total-items">Rp. `+item.inCart * item.price *1000 +`</span>
+          <span class="total-items">Rp. `+ item.inCart * item.price *1000 +`</span>
         </div>
       </div>
       `
     })
     
     // total Cart
+    // const totalPayment = total.toString().split('')
+    // totalPayment.splice(2,0,'.')
+    // console.log(totalPayment.join(''))
+
     totalItems.innerHTML += `
     <div class="row">
       <div class="col-6">
