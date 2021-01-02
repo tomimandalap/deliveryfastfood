@@ -232,22 +232,15 @@ p.menu-add {
   position: absolute;
   width: 100%;
   height: 70%;
-  background: rgba(0, 0, 0, 0.4);
+  /* background: rgba(0, 0, 0, 0.4); */
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0) 100%);
   transition: all 0.3s ease-in;
   cursor: pointer;
   opacity: 0;
   text-align: center;
 }
 
-.card:hover .cart1,
-.card:hover .cart2,
-.card:hover .cart3,
-.card:hover .cart4,
-.card:hover .cart5,
-.card:hover .cart6,
-.card:hover .cart7,
-.card:hover .cart8,
-.card:hover .cart9 {
+.card:hover .cart {
   opacity: 1;
   font-size: 50px;
   color: #fff;
@@ -316,6 +309,10 @@ section.buy-items {
   bottom: 0;
 }
 
+section.buy-items.hide {
+  display: none;
+}
+
 h3.buy-total,
 span.total-price {
   font-size: 22px;
@@ -341,7 +338,9 @@ button#btn-checkout:hover {
 }
 
 /* button cancel cart */
-button#btn-cancel-cart {
+button#btn-cancel-cart,
+a#btn-cancel-cart {
+  padding: 15px 0;
   width: 100%;
   height: 61px;
   border: none;
@@ -350,8 +349,9 @@ button#btn-cancel-cart {
   font-weight: 600;
 }
 
-button#btn-cancel-cart:hover {
-  background: #ff3c84;
+button#btn-cancel-cart:hover,
+a#btn-cancel-cart:hover {
+  background: #ff005d;
 }
 
 /* end container add cart */
@@ -373,8 +373,9 @@ span.prices {
   font-weight: 700;
 }
 
-/* add items */
-section.modal-container {
+/* add items and checkout */
+section.modal-container,
+section.container-checkout {
   background: rgba(0, 0, 0, 0.4);
   display: flex;
   align-items: center;
@@ -391,6 +392,12 @@ section.modal-container {
 }
 
 section.modal-container.show {
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.8s;
+}
+
+section.container-checkout.popup {
   opacity: 1;
   pointer-events: auto;
   transition: all 0.8s;
@@ -462,6 +469,96 @@ button#btn-add {
 }
 
 button#btn-add:hover {
+  background: #85cbd1;
+}
+
+/* box checkout */
+.box-checkout {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  top: 18%;
+  left: 25%;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  padding: 20px 20px;
+  width: 600px;
+  min-height: 500px;
+  max-width: 100%;
+  text-align: left;
+  font-family: 'Airbnb Cereal App';
+  font-weight: 700;
+}
+
+p.text-boxCheckOut {
+  font-size: 30px;
+}
+
+p.text-receipt {
+  margin-top: 5px;
+  font-size: 22px;
+}
+
+h5.name-cashier {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+div.list-checkout,
+div.pay-checkout {
+  font-size: 20px;
+}
+
+h4.title-check-items {
+  font-weight: 600;
+}
+
+span.total-check-items {
+  font-weight: 600;
+  margin-left: 35%;
+}
+
+p.p-total {
+  float: right;
+  margin-top: 10px;
+  margin-right: 5px;
+}
+
+p.payment {
+  margin-bottom: 10px;
+}
+
+button#btn-print,
+button#btn-sendEmail {
+  width: 100%;
+  height: 55px;
+  padding: 5px 30px;
+  font-size: 20px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+button#btn-print {
+  background: #F24F8A;
+}
+
+button#btn-print:hover {
+  background: #ec81a8;
+}
+
+span.text-or {
+  margin: 0 50%;
+}
+
+button#btn-sendEmail {
+  margin-top: 10px;
+  background: #57CAD5;
+}
+
+button#btn-sendEmail:hover {
   background: #85cbd1;
 }
 
@@ -709,6 +806,15 @@ a.youtube:hover {
     font-weight: 600;
   }
 
+  /* .add-cart {
+    height: 70%;
+  } */
+
+  .card:hover .cart {
+    font-size: 40px;
+    padding: 38px;
+  }
+
   .card {
     width: 11rem;
   }
@@ -744,7 +850,9 @@ a.youtube:hover {
   }
 
   /* button cancel cart */
-  button#btn-cancel-cart {
+  button#btn-cancel-cart,
+  a#btn-cancel-cart {
+    padding: 12px 0;
     height: 50px;
     font-size: 18px;
   }
@@ -782,6 +890,59 @@ a.youtube:hover {
   button#btn-add {
     font-size: 14px;
     padding: 8px 31px;
+  }
+
+  /* box checkout */
+  .box-checkout {
+    top: 18%;
+    left: 9%;
+    width: 400px;
+    min-height: 400px;
+  }
+
+  p.text-boxCheckOut {
+    font-size: 18px;
+  }
+
+  p.text-receipt {
+    margin-top: 5px;
+    font-size: 12px;
+  }
+
+  h5.name-cashier,
+  h4.title-check-items {
+    font-size: 16px;
+  }
+
+  span.cart-items {
+    font-size: 14px;
+  }
+
+  div.list-checkout,
+  div.pay-checkout {
+    font-size: 12px;
+  }
+
+  p.text-ppn {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  p.p-total {
+    font-size: 16px;
+  }
+
+  p.payment {
+    font-size: 14px;
+    margin-top: -15px;
+    margin-bottom: 15px;
+  }
+
+  button#btn-print,
+  button#btn-sendEmail {
+    width: 100%;
+    height: 40px;
+    font-size: 14px;
   }
 
   /* footer */

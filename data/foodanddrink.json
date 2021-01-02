@@ -4,73 +4,85 @@
             "category": "Drink",
             "name": "Espresso",
             "price": "10.000",
-            "image": "img1.png"
+            "tag": "img1.png",
+            "inCart": 0
         },
         {
             "category": "Drink",
             "name": "Coffe Latte",
             "price": "15.000",
-            "image": "img2.png"
+            "tag": "img2.png",
+            "inCart": 0
         },
         {
             "category": "Drink",
             "name": "Cappucino",
-            "price": "5.000",
-            "image": "img3.png"
+            "price": "12.000",
+            "tag": "img3.png",
+            "inCart": 0
         },
         {
             "category": "Drink",
             "name": "Red Velvet Latte",
             "price": "33.000",
-            "image": "img4.png"
+            "tag": "img4.png",
+            "inCart": 0
         },
         {
             "category": "Food",
             "name": "Choco Rhum",
             "price": "28.000",
-            "image": "img5.png"
+            "tag": "img5.png",
+            "inCart": 0
         },
         {
             "category": "Food",
             "name": "Black Forest",
             "price": "30.000",
-            "image": "img6.png"
+            "tag": "img6.png",
+            "inCart": 0
         },
         {
             "category": "Food",
             "name": "Chicken Katsu Dabu-dabu",
             "price": "60.000",
-            "image": "img7.png"
+            "tag": "img7.png",
+            "inCart": 0
         },
         {
             "category": "Food",
             "name": "Salmon Truffle Teriyaki",
             "price": "60.000",
-            "image": "img8.png"
+            "tag": "img8.png",
+            "inCart": 0
         },
         {
             "category": "Food",
             "name": "Wiener Schnitzel",
             "price": "69.000",
-            "image": "img9.png"
+            "tag": "img9.png",
+            "inCart": 0
         },
         {
             "category": "Food",
             "name": "Beef Lasagna",
             "price": "68.000",
-            "image": "beef-lasagna.jpg"
+            "tag": "beef-lasagna.jpg",
+            "inCart": 0
         },
         {
             "category": "Food",
             "name": "Black Pepper Chicken",
             "price": "75.000",
-            "image": "black-pepper-chicken.jpg"
+            "tag": "black-pepper-chicken.jpg",
+            "inCart": 0
         },
         {
             "category": "Food",
             "name": "Meatballs Beef Mushroom",
             "price": "68.000",
-            "image": "meatballs-beef-mushroom.jpg"
+            "tag": "meatballs-beef-mushroom.jpg",
+            "inCart": 0
         }
     ]
 }

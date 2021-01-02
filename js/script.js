@@ -1,23 +1,3 @@
-// file data menu
-// $.getJSON('/data/foodanddrink.json', function(response) {
-//   let menu = response.menu
-
-//   $.each(menu, (index, data) => {
-//     $('#menu-list').append(`
-//       <div class="col-6 col-md-4">
-//         <div class="card mb-3">
-//           <img src="img/`+ data.image +`" class="card-img-top" alt="`+ data.category +`" id="img-cursor">
-//           <a href="#" class="add-cart cart">Add Cart</a>
-//           <div class="card-body">
-//             <h5 class="card-title">`+ data.name +`</h5>
-//             <span class="prices">Rp. `+ data.price +`</span>
-//           </div>
-//         </div>
-//       </div>
-//     `)
-//   })
-// })
-
 // klik button navbar
 $(document).ready(function() {
   $("#sidebarCollapse").on('click',function() {
@@ -50,81 +30,36 @@ add.addEventListener('click', function() {
   alert('Success')
 })
 
-// ADD CART
-let carts = document.querySelectorAll('.add-cart')
+// file data menu
+$.getJSON('/data/foodanddrink.json', function(response) {
+  let menu = response.menu
 
-let product = [
-  {
-    category: "Drink",
-    name: 'Espresso',
-    tag: 'img1.png',
-    price: 10000,
-    inCart: 0
-  },
-  {
-    category: "Drink",
-    name: 'Coffe Latte',
-    tag: 'img2.png',
-    price: 15000,
-    inCart: 0
-  },
-  {
-    category: "Drink",
-    name: 'Cappucino',
-    tag: 'img3.png',
-    price: 5000,
-    inCart: 0
-  },
-  {
-    category: "Drink",
-    name: 'Red Velvet Latte',
-    tag: 'img4.png',
-    price: 33000,
-    inCart: 0
-  },
-  {
-    category: "Food",
-    name: 'Choco Rhum',
-    tag: 'img5.png',
-    price: 28000,
-    inCart: 0
-  },
-  {
-    category: "Food",
-    name: 'Black Forest',
-    tag: 'img6.png',
-    price: 30000,
-    inCart: 0
-  },
-  {
-    category: "Food",
-    name: 'Chicken Katsu Dabu-dabu',
-    tag: 'img7.png',
-    price: 60000,
-    inCart: 0
-  },
-  {
-    category: "Food",
-    name: 'Salmon Truffle Teriyaki',
-    tag: 'img8.png',
-    price: 60000,
-    inCart: 0
-  },
-  {
-    category: "Food",
-    name: 'Wiener Schnitzel',
-    tag: 'img9.png',
-    price: 69000,
-    inCart: 0
-  }
-]
-
-for (let i=0; i<carts.length; i++) {
-  carts[i].addEventListener('click', () => {
-    numbersCart(product[i])
-    totalRupiah(product[i])
+  $.each(menu, (index, data) => {
+    $('#menu-list').append(`
+      <div class="col-6 col-md-4">
+        <div class="card mb-3">
+          <img src="img/`+ data.tag +`" class="card-img-top" alt="`+ data.category +`" id="img-cursor"></img>
+          <a href="index.html" class="add-cart cart"><i class="far fa-check-circle"></i></a>
+          <div class="card-body">
+            <h5 class="card-title">`+ data.name +`</h5>
+            <span class="prices">Rp. `+ data.price +`</span>
+          </div>
+        </div>
+      </div>
+    `)
   })
-}
+
+  // ADD CART
+  let carts = document.querySelectorAll('.add-cart')
+
+  for (let i=0; i<carts.length; i++) {
+    carts[i].addEventListener('click', () => {
+      numbersCart(menu[i])
+      totalRupiah(menu[i])
+    })
+  }
+
+})
 
 function loadNumberCart() {
   let productNumber = localStorage.getItem('numbersCart')
@@ -134,7 +69,7 @@ function loadNumberCart() {
   }
 }
 
-const numbersCart = (product) => {
+const numbersCart = (menu) => {
 
   let productNumber = localStorage.getItem('numbersCart')
   productNumber = parseInt(productNumber) // konversi to integer
@@ -147,32 +82,32 @@ const numbersCart = (product) => {
     document.querySelector('span.index-item').textContent = 1
   }
 
-  setItems(product)
+  setItems(menu)
 }
 
-function setItems(product) {
+function setItems(menu) {
   let cartItems = localStorage.getItem('productsInCart')
   cartItems = JSON.parse(cartItems)
   if ( cartItems != null ) {
-    if ( cartItems[product.tag] == undefined ) {
+    if ( cartItems[menu.tag] == undefined ) {
       cartItems = {
         ...cartItems,
-        [product.tag]: product
+        [menu.tag]: menu
       }
     }
-    cartItems[product.tag].inCart += 1
+    cartItems[menu.tag].inCart += 1
   } else {
-    product.inCart = 1
+    menu.inCart = 1
     cartItems = {
-      [product.tag]: product
+      [menu.tag]: menu
     }
   }
   localStorage.setItem('productsInCart', JSON.stringify(cartItems))
 }
 
-function totalRupiah(product) {
+function totalRupiah(menu) {
 
-  // localStorage.setItem("totalRupiah", product.price)
+  // localStorage.setItem("totalRupiah", menu.price)
 
   let price = localStorage.getItem('totalRupiah')
 
@@ -180,13 +115,16 @@ function totalRupiah(product) {
   // console.log(typeof price)
 
   if (price != null) {
-    const costRp = price.split('').join('')
+    const costRp = price.split('.').join('')
+    console.log(costRp)
     const count = Number(costRp)
+    // console.log(count)
 
-    localStorage.setItem("totalRupiah", count + product.price)
+    localStorage.setItem("totalRupiah", count + (Number(menu.price)*1000))
     // console.log("Jumlah : ",count)
   } else {
-    localStorage.setItem("totalRupiah", product.price)
+    localStorage.setItem("totalRupiah", Number(menu.price)*1000)
+    // console.log(price)
   }
 }
 
@@ -205,54 +143,53 @@ function displayCart() {
 
     productContainer.innerHTML = ''
     totalItems.innerHTML = ''
-
+    
+      // CONTEN CART
       Object.values(cartItems).map(item => {
       productContainer.innerHTML += `
-      <div class="containter-cart">
-        <div class="row">
-          <div class="col-4">
-            <img src="img/`+item.tag+`" alt="`+item.category+`" id="img-cart">
-          </div>
+      <div class="row mt-2">
+        <div class="col-4">
+          <img src="img/`+item.tag+`" alt="`+item.category+`" id="img-cart">
+        </div>
 
-          <div class="col-4">
-            <h3 class="title-cart">`+item.name+`</h3>
-            <a class="btn-min" href="#" role="button"><i class="fas fa-minus"></i></a>
-            <span class="cart-items">`+item.inCart+`</span>
-            <a class="btn-plus" href="#" role="button"><i class="fas fa-plus"></i></a>
-          </div>
+        <div class="col-4">
+          <h3 class="title-cart">`+item.name+`</h3>
+          <a class="btn-min" href="#" role="button"><i class="fas fa-minus"></i></a>
+          <span class="cart-items">`+item.inCart+`</span>
+          <a class="btn-plus" href="#" role="button"><i class="fas fa-plus"></i></a>
+        </div>
 
-          <div class="col-4">
-            <span class="total-items">Rp. `+item.inCart * item.price+`</span>
-          </div>
+        <div class="col-4">
+          <span class="total-items">Rp. `+item.inCart * item.price *1000 +`</span>
         </div>
       </div>
       `
     })
-
+    
+    // total Cart
     totalItems.innerHTML += `
-    <section class="buy-items" id="buy-items">
-      <div class="row">
-        <div class="col-6">
-          <h3 class="buy-total">Total:</h3>
-        </div>
-        <div class="col-6">
-          <span class="total-price">Rp. `+ total +`*</span>
-        </div>
+    <div class="row">
+      <div class="col-6">
+        <h3 class="buy-total">Total:</h3>
       </div>
+      <div class="col-6">
+        <span class="total-price">Rp. `+ total +`*</span>
+      </div>
+    </div>
 
-      <div class="row">
-        <div class="col-12">
-        <p class="no-ppn">*Belum termasuk ppn</p>
-        </div>
-        <div class="col-12">
-        <button type="submit" class="btn btn-primary mb-2" id="btn-checkout">Checkout</button>
-        </div>
-        <div class="col-12">
-        <button type="submit" class="btn btn-primary mb-2" id="btn-cancel-cart">Cancel</button>
-        </div>
+    <div class="row">
+      <div class="col-12">
+      <p class="no-ppn">*Belum termasuk ppn</p>
       </div>
-    </section>
+      <div class="col-12">
+      <button type="submit" class="btn btn-primary mb-2" id="btn-checkout">Checkout</button>
+      </div>
+      <div class="col-12">
+      <a class="btn btn-primary mb-2" href="index.html" role="button" id="btn-cancel-cart">Cancel</a>
+      
+    </div>
     `
+    // <button type="submit" class="btn btn-primary mb-2" id="btn-cancel-cart">Cancel</button>
   } 
   else {
     productContainer.innerHTML += `
@@ -266,14 +203,120 @@ function displayCart() {
 loadNumberCart()
 displayCart()
 
-// klik button chart
-const btnCheckuot = document.getElementById('btn-checkout')
-const btnCancleCart = document.getElementById('btn-cancel-cart')
+// box checkout list item
+function checkOutList() {
 
-btnCheckuot.addEventListener('click', ()=> {
-  alert('Payment Success')
+  let cartItems = localStorage.getItem('productsInCart')
+  cartItems = JSON.parse(cartItems)
+
+  let total = localStorage.getItem('totalRupiah')
+  // ppn 10%
+  const ppn = parseInt(total)*0.1
+  // console.log(ppn)
+  const sumTotal = parseInt(total)+ppn
+  // console.log(sumTotal)
+
+
+  let titleCheckOut = document.querySelector(".title-checkout")
+  let listCheckOut = document.querySelector(".list-checkout")
+  let payCheckOut = document.querySelector(".pay-checkout")
+
+  if ( cartItems && listCheckOut ) {
+
+    titleCheckOut.innerHTML = ''
+    listCheckOut.innerHTML = ''
+    payCheckOut.innerHTML=''
+
+    titleCheckOut.innerHTML +=`
+    <div class="row">
+      <div class="col-6">
+        <p class="text-boxCheckOut">Checkout</p>
+      </div>
+      <div class="col-6">
+        <p class="text-receipt">Receipt no: #010410919</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <h5 class="name-cashier">Cashier: <span class="names">Pevita Pearce</span></h5>
+      </div>
+    </div>
+    `
+
+    Object.values(cartItems).map(item => {
+      listCheckOut.innerHTML += `
+      <div class="row">
+        <div class="col-6">
+          <h4 class="title-check-items">`+item.name+`</h4>
+        </div>
+        <div class="col-2">
+        <span class="cart-items">x`+item.inCart+`</span>
+        </div>
+        <div class="col-4">
+        <span class="total-check-items">Rp. `+item.inCart * item.price *1000 +`</span>
+        </div>
+      </div>
+      `
+    })
+
+    payCheckOut.innerHTML += `
+    <div class="row">
+      <div class="col-8">
+        <p class="text-ppn">Ppn 10%</p>
+      </div>
+      <div class="col-4">
+      <span class="total-check-items">Rp. `+ ppn +`</span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <p class="p-total">Total: <span class="total-pay">Rp. `+ sumTotal +`</span></p>
+      </div>
+
+      <div class="col-12">
+        <p class="payment">Payment: Cash</p>
+      </div>
+    </div>
+
+    <!-- button form -->
+      <button type="submit" class="btn btn-danger mb-2" id="btn-print">Print</button>
+      <br><span class="text-or">Or</span><br>
+      <button type="submit" class="btn btn-info mb-2" id="btn-sendEmail">Send Email</button>
+    <!-- button form  end-->
+    `
+  }
+
+  // button box-checkout
+  const boxCheckOut = document.getElementById('container-checkout')
+  const btnPrint = document.getElementById('btn-print')
+  const btnEmail = document.getElementById('btn-sendEmail')
+
+  btnPrint.addEventListener('click', () => {
+    boxCheckOut.classList.remove('popup')
+  })
+
+  btnEmail.addEventListener('click', () => {
+    boxCheckOut.classList.remove('popup')
+  })
+}
+
+// button checkout
+let btnCheckOut = document.getElementById('btn-checkout')
+let boxCheckOut = document.getElementById('container-checkout')
+let totalItems = document.querySelector('.buy-items')
+let btnCancel = document.getElementById('btn-cancel-cart')
+
+btnCheckOut.addEventListener('click', () => {
+  boxCheckOut.classList.add('popup')
+  checkOutList()
 })
 
-btnCancleCart.addEventListener('click', () => {
-  alert('Payment cancle')
+btnCancel.addEventListener('click', () => {
+
+  localStorage.setItem('totalRupiah', 0)
+  localStorage.setItem('numbersCart', 0)
+  localStorage.setItem('productsInCart', null)
+
 })
