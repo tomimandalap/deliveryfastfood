@@ -1183,14 +1183,19 @@ a.youtube:hover {
   }
 
   /* add items */
+
+  section.modal-container {
+    height: 105vh;
+  }
+
   .modal {
     top: 18%;
     left: 8%;
     width: 350px;
-    height: 350px;
+    min-height: 350px;
   }
 
-  .modal h1 {
+  s .modal h1 {
     font-size: 16px;
   }
 
@@ -1285,17 +1290,54 @@ a.youtube:hover {
   span.text-or {
     font-size: 12px;
   }
+}
 
-  /* footer */
-  footer {
-    font-size: 14px;
-    padding: 15px;
-    text-align: center;
-    /* margin-top: 50px; */
+/* mode xsmall */
+@media (max-width: 375px) {
+
+  /* shoping bag item */
+  aside.left {
+    min-width: 50px;
+    max-width: 50px;
+    margin-left: -50px;
   }
 
-  a.github,
-  a.youtube {
+  aside#side-left.active {
+    margin-left: 0;
+    transition: all 0.5s;
+  }
+
+  .list-bars a {
     font-size: 20px;
+    padding: 15px 15px;
+  }
+
+  section.main {
+    flex: 60%;
+    padding: 30px 30px;
+    transition: 0.8s;
+  }
+
+  section#main.setting {
+    padding: 30px 10px;
+    background: rgba(102, 102, 102, 0.13);
+    transition: 0.4s;
+  }
+
+  .bars-item3 {
+    margin-left: 4px;
+  }
+
+  /* add items */
+
+  section.modal-container {
+    height: 105vh;
+  }
+
+  .modal {
+    top: 18%;
+    left: 4%;
+    width: 350px;
+    min-height: 350px;
   }
 }

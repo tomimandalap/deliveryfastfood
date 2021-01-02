@@ -690,19 +690,6 @@ a.youtube:hover {
     font-size: 14px;
     padding: 8px 31px;
   }
-
-  /* footer */
-  footer {
-    font-size: 14px;
-    padding: 15px;
-    text-align: center;
-    /* margin-top: 50px; */
-  }
-
-  a.github,
-  a.youtube {
-    font-size: 20px;
-  }
 }
 
 /* mode samrtphone */
@@ -718,9 +705,9 @@ a.youtube:hover {
   }
 
   aside.left {
-    min-width: 50px;
-    max-width: 50px;
-    margin-left: -50px;
+    min-width: 60px;
+    max-width: 60px;
+    margin-left: -60px;
   }
 
   aside#side-left.active {
@@ -729,24 +716,24 @@ a.youtube:hover {
   }
 
   .list-bars a {
-    font-size: 16px;
+    font-size: 20px;
     padding: 15px 20px;
   }
 
   section.main {
-    flex: 80%;
-    padding: 30px 22px;
+    flex: 50%;
+    padding: 30px 25px;
     transition: 0.8s;
   }
 
   section#main.setting {
     padding: 30px 1px !important;
-    background: rgba(102, 102, 102, 0.13);
+    background: rgba(53, 42, 42, 0.13);
     transition: 0.4s;
   }
 
   .bars-item3 {
-    font-size: 16px !important;
+    font-size: 20px !important;
     margin-left: 8px;
   }
 
@@ -759,9 +746,9 @@ a.youtube:hover {
   /* card history */
   .card {
     position: relative;
-    width: 330px;
+    width: 300px;
     height: 180px;
-    margin-left: 15px;
+    margin-left: 25px;
     margin-bottom: 25px;
   }
 
@@ -801,19 +788,19 @@ a.youtube:hover {
   .dot1.dot-up,
   .dot2.dot-up,
   .dot3.dot-up {
-    left: 240px;
+    left: 210px;
   }
 
   .dot1.dot-down,
   .dot2.dot-down,
   .dot3.dot-down {
-    left: 182px;
+    left: 152px;
   }
 
   .dot1.dot-center,
   .dot2.dot-center,
   .dot3.dot-center {
-    left: 216px;
+    left: 184px;
   }
 
   .card-body {
@@ -834,30 +821,33 @@ a.youtube:hover {
 
   /* history-graph */
   .revenue-box {
-    height: 225px;
-    /* width: 350px; */
-    padding: 10px 15px;
+    height: 200px;
+    width: 90%;
+    padding: 10px 5px;
     font-size: 16px;
     transition: 0.8s;
+    margin-left: 20px;
   }
 
   .dropdown a#dropdownMenuLink {
     border-radius: 5px;
     font-size: 12px;
-    margin-left: 75%;
+    margin-left: 70%;
     margin-top: -80px;
   }
 
   /* container chart revenue */
   .chart-container {
     margin-top: -15px;
-    margin-left: 15px;
-    width: 75vw;
+    margin-left: 5px;
+    width: 68vw;
   }
 
   .recent-box {
-    height: 300px;
+    width: 90%;
+    min-height: 300px;
     padding: 10px 15px;
+    margin-left: 20px;
     font-size: 16px;
   }
 
@@ -872,11 +862,16 @@ a.youtube:hover {
   }
 
   /* add items */
+
+  section.modal-container {
+    height: 105vh;
+  }
+
   .modal {
     top: 18%;
     left: 8%;
     width: 350px;
-    height: 350px;
+    min-height: 350px;
   }
 
   .modal h1 {
@@ -911,17 +906,221 @@ a.youtube:hover {
     font-size: 14px;
     padding: 8px 31px;
   }
+}
 
-  /* footer */
-  footer {
-    font-size: 14px;
-    padding: 15px;
-    text-align: center;
-    /* margin-top: 50px; */
+/* mode x-small */
+@media (max-width: 375px) {
+  button.btn.btn-light {
+    font-size: 16px;
   }
 
-  a.github,
-  a.youtube {
-    font-size: 20px;
+  a.home-text {
+    top: 14px;
+    font-size: 18px;
+    left: 45%;
+  }
+
+  aside.left {
+    min-width: 40px;
+    max-width: 40px;
+    margin-left: -40px;
+  }
+
+  aside#side-left.active {
+    margin-left: 0;
+    transition: all 0.5s;
+  }
+
+  .list-bars a {
+    font-size: 16px;
+    padding: 15px 12px;
+  }
+
+  section.main {
+    flex: 50%;
+    padding: 30px 20px;
+    transition: 0.8s;
+  }
+
+  section#main.setting {
+    padding: 30px 1px !important;
+    background: rgba(65, 51, 51, 0.13);
+    transition: 0.4s;
+  }
+
+  .bars-item3 {
+    font-size: 16px !important;
+    margin-left: 0;
+  }
+
+  .bars-item1:hover,
+  .bars-item2:hover,
+  .bars-item3:hover {
+    transform: rotate(0deg);
+  }
+
+  /* card history */
+  .card {
+    position: relative;
+    width: 280px;
+    height: 160px;
+    margin-left: 20px;
+    margin-bottom: 25px;
+  }
+
+  .today {
+    background: linear-gradient(278.29deg, #FBB2B4 30.05%, rgba(255, 143, 178, 0) 133.19%);
+    filter: drop-shadow(10px 15px 10px rgba(255, 143, 178, 0.25));
+    border-radius: 10px;
+  }
+
+  .orders {
+    background: linear-gradient(278.29deg, #29DFFF 30.05%, rgba(41, 223, 255, 0) 133.19%);
+    filter: drop-shadow(10px 15px 10px rgba(41, 223, 255, 0.25));
+    border-radius: 10px;
+  }
+
+  .years {
+    background: linear-gradient(278.29deg, #AB84C8 30.05%, rgba(241, 201, 236, 0) 133.19%);
+    filter: drop-shadow(10px 15px 10px rgba(241, 201, 236, 0.25));
+    border-radius: 10px;
+  }
+
+  .dot1 {
+    width: 60px;
+    height: 60px;
+  }
+
+  .dot2 {
+    width: 60px;
+    height: 60px;
+  }
+
+  .dot3 {
+    width: 60px;
+    height: 60px;
+  }
+
+  .dot1.dot-up,
+  .dot2.dot-up,
+  .dot3.dot-up {
+    left: 210px;
+  }
+
+  .dot1.dot-down,
+  .dot2.dot-down,
+  .dot3.dot-down {
+    left: 152px;
+  }
+
+  .dot1.dot-center,
+  .dot2.dot-center,
+  .dot3.dot-center {
+    left: 186px;
+  }
+
+  .card-body {
+    padding: 35px 30px;
+  }
+
+  h5.card-title {
+    font-size: 14px;
+  }
+
+  h3.card-nominal {
+    font-size: 18px;
+  }
+
+  p.card-text {
+    font-size: 12px;
+  }
+
+  /* history-graph */
+  .revenue-box {
+    height: 200px;
+    width: 280px;
+    padding: 10px 5px;
+    font-size: 16px;
+    transition: 0.8s;
+    margin-left: 20px;
+    /* transform: rotate(90deg); */
+  }
+
+  .dropdown a#dropdownMenuLink {
+    border-radius: 5px;
+    font-size: 12px;
+    margin-left: 67%;
+    margin-top: -80px;
+  }
+
+  /* container chart revenue */
+  .chart-container {
+    margin-top: -15px;
+    margin-left: 5px;
+    width: 70vw;
+  }
+
+  .recent-box {
+    width: 280px;
+    min-height: 300px;
+    padding: 10px 15px;
+    margin-left: 20px;
+    font-size: 16px;
+  }
+
+  .tables th,
+  .tables td {
+    padding: 5px;
+    font-size: 8px;
+  }
+
+  .tables td {
+    color: #000;
+  }
+
+  /* add items */
+
+  section.modal-container {
+    height: 105vh;
+  }
+
+  .modal {
+    top: 18%;
+    left: 3%;
+    width: 350px;
+    min-height: 350px;
+  }
+
+  .modal h1 {
+    font-size: 16px;
+  }
+
+  /* form group */
+  .form-group label {
+    font-size: 14px;
+  }
+
+  .form-group .input {
+    width: 72%;
+    margin-top: 5px;
+    margin-left: 20px;
+  }
+
+  .input input.form-control,
+  select.custom-select {
+    font-size: 12px;
+  }
+
+  button#btn-cancel {
+    font-size: 14px;
+    padding: 8px 20px;
+    margin-top: 50px;
+    margin-left: 50px;
+  }
+
+  button#btn-add {
+    margin-top: 50px;
+    font-size: 14px;
+    padding: 8px 31px;
   }
 }
