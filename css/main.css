@@ -1,0 +1,927 @@
+@font-face {
+  font-family: 'Airbnb Cereal App';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Airbnb Cereal App'), url('AirbnbCerealMedium.woff') format('woff');
+}
+
+* {
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: whitesmoke;
+}
+
+.navbar {
+  background: white;
+}
+
+button.btn.btn-light {
+  background: white;
+  font-size: 20px;
+  border: none;
+}
+
+button.btn.btn-light:hover {
+  background: whitesmoke;
+}
+
+a.home-text {
+  position: absolute;
+  top: 12px;
+  left: 25%;
+  color: #000;
+  font-family: 'Airbnb Cereal App';
+  font-size: 25px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+a.home-text:hover {
+  color: #666;
+}
+
+button.btn.btn-light.search {
+  position: absolute;
+  top: 9px;
+  left: 65%;
+}
+
+button.btn.btn-light.cart {
+  position: absolute;
+  top: 9px;
+  left: 80%;
+  height: 42px;
+  font-weight: 700;
+}
+
+button.btn.btn-light.cart p {
+  font-size: 20px;
+}
+
+/* shoping bag item */
+span.index-item {
+  position: absolute;
+  top: 11px;
+  left: 85%;
+  display: block;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  background: #57CAD5;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  padding: 6px 10px;
+  text-align: center;
+}
+
+/* shoping bag item */
+
+/* list menu, main chart */
+.container-bars {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+aside.left {
+  /* flex: 5%; */
+  min-width: 100px;
+  max-width: 100px;
+  background: #fff;
+  color: #fff;
+  transition: all 0.8s;
+  /* min-height: 90vh; */
+}
+
+aside#side-left.active {
+  margin-left: -100px;
+  transition: all 0.5s;
+}
+
+section.main {
+  flex: 60%;
+  background-color: #eee;
+  padding: 30px 20px;
+  transition: 0.8s;
+  height: 550px;
+  overflow: auto;
+}
+
+section#main.setting {
+  padding: 30px 60px;
+  background: rgba(102, 102, 102, 0.13);
+  /* border: 2px solid #ddd; */
+  transition: 0.4s;
+}
+
+aside.right {
+  /* position: absolute;
+  flex: 30%;
+  top: 58px;
+  right: 0; */
+  text-align: center;
+  min-width: 400px;
+  max-width: 400px;
+  background: #fff;
+  color: #000;
+  transition: all 0.8s;
+  /* min-height: 90vh; */
+  font-family: 'Airbnb Cereal App';
+  background-color: white;
+}
+
+/* aside#side-right.active {
+  display: none;
+  margin-right: -400px;
+  transition: all 0.5s;
+} */
+
+/* list menu */
+.list-bars {
+  padding: 0;
+}
+
+.list-bars li {
+  list-style: none;
+}
+
+.list-bars a {
+  font-size: 30px;
+  display: block;
+  padding: 15px 40px;
+}
+
+.bars-item1,
+.bars-item2 {
+  color: black;
+  transform: rotate(0deg);
+  transition: all 0.5s;
+}
+
+/* status list on */
+.bars-item1#status-on {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  transform: rotate(0deg);
+}
+
+/* hover list bars */
+.bars-item1:hover,
+.bars-item2:hover {
+  color: #666666;
+  transform: rotate(180deg);
+  transition: all 0.8s;
+}
+
+.bars-item3 {
+  color: limegreen;
+  font-size: 30px !important;
+  background: transparent !important;
+  display: block;
+  margin-top: 10px;
+  margin-left: 26px;
+  transform: rotate(0deg);
+  transition: all 0.5s;
+}
+
+.bars-item3:hover {
+  background: transparent !important;
+  color: lightgreen;
+  transform: rotate(180deg);
+  transition: all 0.8s;
+}
+
+/* cart item */
+img.image {
+  width: 150px;
+  position: relative;
+  top: 0;
+}
+
+#sidebar-right h3.menu-cart,
+#sidebar-right p.mune-add {
+  font-family: 'Airbnb Cereal App';
+  margin-left: 5%;
+}
+
+h3.menu-cart {
+  font-weight: 600;
+  font-size: 25px;
+
+}
+
+p.menu-add {
+  color: #666;
+  font-size: 14px;
+}
+
+/* card image */
+.card {
+  background-color: transparent;
+  border: none;
+  width: 15.5rem;
+  /* margin: 10px 20px; */
+  position: relative;
+  overflow: hidden;
+}
+
+.add-cart {
+  position: absolute;
+  width: 100%;
+  height: 70%;
+  /* background: rgba(0, 0, 0, 0.4); */
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0) 100%);
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+  opacity: 0;
+  text-align: center;
+}
+
+.card:hover .cart {
+  opacity: 1;
+  font-size: 50px;
+  color: #fff;
+  padding: 60px;
+  /* text-decoration: none; */
+  transition: all 0.3s ease-out;
+}
+
+img#img-cursor {
+  cursor: pointer;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* container add cart */
+.containter-cart {
+  display: flexbox;
+  padding: 10px 10px;
+  width: 100%;
+  max-height: 300px;
+  overflow: auto;
+}
+
+img#img-cart {
+  width: 100px;
+}
+
+h3.title-cart {
+  font-size: 18px;
+  font-weight: 600;
+  white-space: nowrap;
+  margin-bottom: 20px;
+}
+
+a.btn-min,
+a.btn-plus {
+  background: #81de3a52;
+  color: #82DE3A;
+  font-size: 16px;
+  padding: 5px 10px;
+  width: 40px;
+  height: 40px;
+}
+
+span.cart-items {
+  font-size: 20px;
+  font-weight: 600;
+  padding: 0 5px;
+  color: #82DE3A;
+}
+
+span.total-items {
+  position: absolute;
+  top: 50px;
+  right: 15px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* buy-items TOTAL */
+section.buy-items {
+  /* background: #666; */
+  text-align: left;
+  padding: 10px 5px;
+  position: relative;
+  /* top: 62%; */
+  bottom: 0;
+}
+
+section.buy-items.hide {
+  display: none;
+}
+
+h3.buy-total,
+span.total-price {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+span.total-price {
+  float: right;
+}
+
+p.no-ppn {
+  font-size: 16px;
+}
+
+/* button checkuot */
+button#btn-checkout {
+  width: 100%;
+  height: 61px;
+  border: none;
+  background: #57CAD5;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+button#btn-checkout:hover {
+  background: #1ad5e6;
+}
+
+/* button cancel cart */
+button#btn-cancel-cart,
+a#btn-cancel-cart {
+  padding: 15px 0;
+  width: 100%;
+  height: 61px;
+  border: none;
+  background: #F24F8A;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+button#btn-cancel-cart:hover,
+a#btn-cancel-cart:hover {
+  background: #ff005d;
+}
+
+/* end container add cart */
+
+.card-body {
+  font-family: 'Airbnb Cereal App';
+  margin-left: -20px;
+}
+
+h5.card-title {
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: -10px;
+  margin-bottom: -3px;
+}
+
+span.prices {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+/* add items and checkout */
+section.modal-container,
+section.container-checkout {
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  opacity: 0;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  transition: all 0.8s;
+  z-index: 1;
+}
+
+section.modal-container.show {
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.8s;
+}
+
+section.container-checkout.popup {
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.8s;
+}
+
+.modal {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  top: 18%;
+  left: 25%;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  padding: 20px 20px;
+  width: 600px;
+  height: 400px;
+  max-width: 100%;
+  text-align: left;
+}
+
+.modal h1 {
+  font-family: 'Airbnb Cereal App';
+  font-size: 25px;
+  font-weight: 600;
+}
+
+/* form group */
+.form-group {
+  font-family: 'Airbnb Cereal App';
+  clear: both;
+}
+
+.form-group label {
+  display: block;
+  padding: 12px 0;
+  float: left;
+  width: 20%;
+  font-weight: 600;
+}
+
+.form-group .input {
+  display: block;
+  width: 78%;
+  float: left;
+  margin-top: 7px;
+  box-shadow: 0px 5px 8px rgb(0, 0, 0, 0.2);
+}
+
+button#btn-cancel {
+  padding: 5px 30px;
+  font-weight: 600;
+  background: #F24F8A;
+  border: none;
+  margin-top: 70px;
+  margin-left: 190px;
+}
+
+button#btn-cancel:hover {
+  background: #ec81a8;
+}
+
+button#btn-add {
+  padding: 5px 41px;
+  font-weight: 600;
+  background: #57CAD5;
+  border: none;
+  margin-top: 70px;
+}
+
+button#btn-add:hover {
+  background: #85cbd1;
+}
+
+/* box checkout */
+.box-checkout {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  top: 18%;
+  left: 25%;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  padding: 20px 20px;
+  width: 600px;
+  height: 500px;
+  overflow: auto;
+  max-width: 100%;
+  text-align: left;
+  font-family: 'Airbnb Cereal App';
+  font-weight: 700;
+}
+
+p.text-boxCheckOut {
+  font-size: 25px;
+}
+
+p.text-receipt {
+  margin-top: 5px;
+  font-size: 18px;
+}
+
+h5.name-cashier {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+div.list-checkout,
+div.pay-checkout {
+  font-size: 16px;
+}
+
+h4.title-check-items {
+  font-weight: 600;
+}
+
+span.total-check-items {
+  font-weight: 600;
+  margin-left: 35%;
+}
+
+p.p-total {
+  float: right;
+  margin-top: 10px;
+  margin-right: 5px;
+}
+
+p.payment {
+  margin-bottom: 10px;
+}
+
+button#btn-print,
+button#btn-sendEmail {
+  width: 100%;
+  height: 55px;
+  padding: 5px 30px;
+  font-size: 20px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+button#btn-print {
+  background: #F24F8A;
+}
+
+button#btn-print:hover {
+  background: #ec81a8;
+}
+
+span.text-or {
+  margin: 0 50%;
+}
+
+button#btn-sendEmail {
+  margin-top: 10px;
+  background: #57CAD5;
+}
+
+button#btn-sendEmail:hover {
+  background: #85cbd1;
+}
+
+/* mode tablet */
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+  button.btn.btn-light {
+    font-size: 20px;
+  }
+
+  a.home-text {
+    top: 14px;
+    font-size: 22px;
+  }
+
+  button.btn.btn-light.cart {
+    left: 79%;
+  }
+
+  button.btn.btn-light.cart p {
+    font-size: 20px;
+  }
+
+  /* shoping bag item */
+  span.index-item {
+    top: 11px;
+    left: 87%;
+  }
+
+  aside.left {
+    min-width: 80px;
+    max-width: 80px;
+    margin-left: -80px;
+  }
+
+  aside#side-left.active {
+    margin-left: 0;
+    transition: all 0.5s;
+  }
+
+  .list-bars a {
+    font-size: 25px;
+    padding: 15px 25px;
+  }
+
+  section.main {
+    flex: 60%;
+    /* background-color: rgb(61, 4, 4); */
+    padding: 30px 60px;
+    transition: 0.8s;
+  }
+
+  section#main.setting {
+    padding: 30px 30px;
+    background: rgba(102, 102, 102, 0.13);
+    transition: 0.4s;
+  }
+
+  aside.right {
+    display: none;
+  }
+
+  aside#side-right.active {
+    /* position: fixed; */
+    display: block;
+    position: absolute;
+    top: auto;
+    right: auto;
+    width: 500px;
+    min-height: 500px;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+  }
+
+  .bars-item3 {
+    font-size: 25px !important;
+    margin-left: 12px;
+  }
+
+  /* cart item */
+  img.image {
+    width: 150px;
+  }
+
+  h3.menu-cart {
+    color: #000;
+    font-size: 25px;
+  }
+
+  p.menu-add {
+    color: #000;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  /* add items */
+  .modal {
+    margin-top: -10px;
+    width: 500px;
+    height: 400px;
+  }
+
+  .modal h1 {
+    font-size: 20px;
+  }
+
+  /* form group */
+  button#btn-cancel {
+    margin-top: 70px;
+    margin-left: 115px;
+  }
+}
+
+/* Small devices landscape phones*/
+
+@media (max-width: 768px) {
+  button.btn.btn-light {
+    font-size: 16px;
+  }
+
+  a.home-text {
+    top: 14px;
+    font-size: 18px;
+  }
+
+  button.btn.btn-light.cart {
+    left: 74%;
+    top: 4px;
+  }
+
+  button.btn.btn-light.cart p {
+    font-size: 20px;
+  }
+
+  /* shoping bag item */
+  span.index-item {
+    top: 9px;
+    left: 88%;
+    font-size: 14px;
+    width: 34px;
+    height: 34px;
+    padding: 6px 13px;
+  }
+
+  aside.left {
+    min-width: 75px;
+    max-width: 75px;
+    margin-left: -75px;
+  }
+
+  aside#side-left.active {
+    margin-left: 0;
+    transition: all 0.5s;
+  }
+
+  .list-bars a {
+    font-size: 20px;
+    padding: 15px 30px;
+  }
+
+  section.main {
+    flex: 60%;
+    /* background-color: rgb(61, 4, 4); */
+    padding: 30px 50px !important;
+    transition: 0.8s;
+  }
+
+  section#main.setting {
+    padding: 30px 20px !important;
+    background: rgba(102, 102, 102, 0.13);
+    transition: 0.4s;
+  }
+
+  aside.right {
+    display: none !important;
+  }
+
+  aside#side-right.active {
+    display: block !important;
+    /* position: fixed !important; */
+    position: absolute;
+    top: auto;
+    right: auto;
+    min-height: 400px;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+  }
+
+  .bars-item3 {
+    font-size: 20px !important;
+    margin-left: 16px;
+  }
+
+  .bars-item1:hover,
+  .bars-item2:hover,
+  .bars-item3:hover {
+    transform: rotate(0deg);
+  }
+
+  /* cart item */
+  img.image {
+    width: 120px;
+  }
+
+  h3.menu-cart {
+    color: #000;
+    font-size: 16px;
+  }
+
+  p.menu-add {
+    color: #000;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  /* .add-cart {
+    height: 70%;
+  } */
+
+  .card:hover .cart {
+    font-size: 40px;
+    padding: 38px;
+  }
+
+  .card {
+    width: 11rem !important;
+  }
+
+  /* .card-body {
+    font-family: 'Airbnb Cereal App';
+    margin-left: -20px;
+  } */
+
+  h5.card-title {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 2px;
+  }
+
+  span.prices {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  /* buy-items TOTAL */
+
+  h3.buy-total,
+  span.total-price {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  /* button checkuot */
+  button#btn-checkout {
+    height: 50px;
+    font-size: 18px;
+  }
+
+  /* button cancel cart */
+  button#btn-cancel-cart,
+  a#btn-cancel-cart {
+    padding: 12px 0;
+    height: 50px;
+    font-size: 18px;
+  }
+
+  /* add items */
+  .modal {
+    top: 18%;
+    left: 9% !important;
+    width: 400px;
+    height: 400px;
+  }
+
+  .modal h1 {
+    font-size: 18px;
+  }
+
+  /* form group */
+  .form-group label {
+    font-size: 16px;
+  }
+
+  .form-group .input {
+    width: 60%;
+    margin-top: 7px;
+    margin-left: 50px;
+  }
+
+  button#btn-cancel {
+    font-size: 14px;
+    padding: 8px 20px;
+    margin-top: 70px;
+    margin-left: 70px;
+  }
+
+  button#btn-add {
+    font-size: 14px;
+    padding: 8px 31px;
+  }
+
+  /* box checkout */
+  .box-checkout {
+    top: 18%;
+    left: 9%;
+    width: 400px;
+    height: 400px;
+    overflow: auto;
+  }
+
+  p.text-boxCheckOut {
+    font-size: 18px;
+  }
+
+  p.text-receipt {
+    margin-top: 5px;
+    font-size: 12px;
+  }
+
+  h5.name-cashier,
+  h4.title-check-items {
+    font-size: 16px;
+  }
+
+  span.cart-items {
+    font-size: 14px;
+  }
+
+  div.list-checkout,
+  div.pay-checkout {
+    font-size: 12px;
+  }
+
+  p.text-ppn {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  p.p-total {
+    font-size: 16px;
+  }
+
+  p.payment {
+    font-size: 14px;
+    margin-top: -15px;
+    margin-bottom: 15px;
+  }
+
+  button#btn-print,
+  button#btn-sendEmail {
+    width: 100%;
+    height: 40px;
+    font-size: 14px;
+  }
+}
