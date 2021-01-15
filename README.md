@@ -60,4 +60,4 @@ Saya menggunakan beberapa komponen penting sebagai berikut:
 [Icon]: https://fontawesome.com/icons?d=gallery
 [fontawesome]: https://cdnjs.com/libraries/font-awesome
 [chartjs]: https://www.chartjs.org/docs/latest/
-[ini]: https://fastfoodtoms.netlify.app/index.html
+[ini]: https://fastfoodtoms.netlify.app/
