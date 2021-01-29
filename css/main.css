@@ -13,6 +13,7 @@
 body {
   margin: 0;
   background: whitesmoke;
+  overflow-x: hidden;
 }
 
 .navbar {
@@ -108,7 +109,7 @@ section.main {
   background-color: #eee;
   padding: 30px 20px;
   transition: 0.8s;
-  height: 550px;
+  height: 595px;
   overflow: auto;
 }
 
@@ -263,8 +264,9 @@ img#img-cursor {
   display: flexbox;
   padding: 10px 10px;
   width: 100%;
-  max-height: 300px;
+  height: 350px;
   overflow: auto;
+  overflow-x: hidden;
 }
 
 img#img-cart {
@@ -618,6 +620,7 @@ button#btn-sendEmail:hover {
     /* background-color: rgb(61, 4, 4); */
     padding: 30px 60px;
     transition: 0.8s;
+    height: 585px;
   }
 
   section#main.setting {
